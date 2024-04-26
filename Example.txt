@@ -1,0 +1,66 @@
+EXAMPLE-1
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        
+        Welcome to the world of React using jsx
+        </div>
+    )
+  }
+}
+
+export default App;
+
+
+Example-2
+
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Nipuna Technologies</h1>
+        Welcome to the world of React using jsx
+        </div>
+    )
+  }
+}
+
+export default App;
+
+
+
+Example-3:STYILING
+
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    var myStyle={
+      fontSize:80,
+      fontFamily:'tahoma',
+      color:'red'
+    }
+    var mystyleb={
+      fontSize:60,
+      fontFamily:'bold-italic',
+      color:'green'
+    }
+    return (
+      <div>
+        
+        <h1 style={myStyle}>Nipuna Technologies</h1>
+        <h1 style={mystyleb}>Vijayawada</h1>
+        </div>
+    )
+  }
+}
+
+export default App;
