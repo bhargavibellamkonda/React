@@ -1,0 +1,35 @@
+COMMENT in JSX
+
+import React, { Component } from 'react'
+
+export class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1 className='hello'>Hello react</h1>
+        \*This is a component in JSX*/
+      </div>
+    )
+  }
+}
+
+export default App;
+
+
+CONDITIONAL EXPRESSIONS
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    var i=5;
+    return (
+      <div>
+        <h1>{i=1?'True!':'Flse!'}</h1>
+        
+      </div>
+    )
+  }
+}
+
+export default App;
