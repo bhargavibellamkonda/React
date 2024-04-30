@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+function Header(){
+  const [Number , setNumber] =useState(0);
+  const plus=()=>{
+    setNumber(Number+1);
+  }
+
+  const minus=()=>{
+    setNumber(Number-1);
+  }
+  return(
+    <div className='container'>
+      <h1>Using Functional Component</h1>
+      <p>Counter App</p>
+      <p className='number'>{Number}</p>
+      <button className="btn btn-1" onClick={plus}>+</button> 
+      <button className="btn btn-2" onClick={minus}>-</button> 
+
+    </div>
+  )
+}
+export default Header;
