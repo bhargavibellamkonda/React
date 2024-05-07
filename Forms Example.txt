@@ -1,0 +1,67 @@
+FORMS EXAMPLE
+==================================================
+
+import React,{useState} from 'react';
+import './mystyle.css'
+const Calculator=()=>{
+  const[inputA,setInputA]=useState(' ');
+  const[inputB,setInputB]=useState(' ');
+  const[result,setResult]=useState(' ');
+  const handleInputChange=(e)=>{
+    const{name,value}=e.target;
+    if(name==="aval"){
+      setInputA(value);
+    }else if(name==="bval"){
+       setInputB(value);
+    }
+  };
+  const handleOperation=(operator)=>{
+    const a=parseInt(inputA);
+    const b=parseInt(inputB);
+    
+    switch(operator){
+      case'+':
+       setResult(a+b);
+       break;
+      case'-':
+       setResult(a-b);
+       break;
+      case'*':
+       setResult(a*b);
+       break;
+      case'/':
+       setResult(a/b);
+       break;
+      case'%':
+       setResult(a%b);
+       break;
+      default:
+        break;
+    }
+  };
+  const reset=()=>{
+    setInputA('');
+    setInputB('');
+    setResult('');
+  };
+  return(
+    <div className='d1'>
+      
+      <label htmlFor="aval">A</label>
+      <input type="text" id="v1" name='aval' placeholder='a value'value={inputA} onChange={handleInputChange} className='tbs1' required autoFocus/><br/><br/>
+      <label htmlFor="bval">B</label>
+      <input type="text" id="v2" name='bval' placeholder='b value'value={inputB} onChange={handleInputChange} className='tbs1' required /><br/><br/>
+      <label htmlFor="cval">C</label>
+      <input type="text" id="v3" name='cval' placeholder='c value'value={result} readOnly className='tbs1' /><br/><br/>
+      <div style={{position:'relative',left:'20px'}}>
+        <button className='bts1' onClick={()=>handleOperation('+')}>+</button>
+        <button className='bts1' onClick={()=>handleOperation('-')}>-</button>
+        <button className='bts1' onClick={()=>handleOperation('*')}>*</button>
+        <button className='bts1' onClick={()=>handleOperation('/')}>/</button>
+        <button className='bts1' onClick={()=>handleOperation('%')}>%</button>
+        <button className='bts1' onClick={reset}><span>&gt;</span></button>
+      </div>
+    </div> 
+  );
+};
+export default Calculator;
